@@ -14,13 +14,11 @@ public class Ejercicio1 {
 
         Scanner read = new Scanner(System.in);
         int num1;
-        Scanner read1 = new Scanner(System.in);
         int num2;
         System.out.println("Ingrese los dos valores a sumar");
         num1 = read.nextInt();
-        num2 = read1.nextInt();
+        num2 = read.nextInt();
         int resultado = num1 + num2;
         System.out.println("La suma de dichos numeros es: " + resultado);
-         
     }
 }

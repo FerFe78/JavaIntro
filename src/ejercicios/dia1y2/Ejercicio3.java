@@ -13,10 +13,10 @@ public class Ejercicio3 {
     public static void main(String[] args) {
 
 
-        Scanner read3 = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
         String frase;
         System.out.println("Ingrese una frase");
-        frase = read3.nextLine();
+        frase = read.nextLine();
         String fraseMay = frase.toUpperCase();
         System.out.println(fraseMay);
         String fraseMin = frase.toLowerCase();

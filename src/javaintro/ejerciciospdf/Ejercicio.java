@@ -157,10 +157,10 @@ public class Ejercicio {
         
         for(int i = 0; i < 4; i++){
             do {
-                System.out.println("Ingrese un número entre 0 y 20");
+                System.out.println("Ingrese un número entre 1 y 20");
                 number = read.nextInt();
      
-            }while(number < 0 || number > 20 );
+            }while(number < 1 || number > 20 );
             System.out.print(number + " ");
             for(int j = 0; j < number; j++){
                 System.out.print("*");
@@ -168,5 +168,42 @@ public class Ejercicio {
             System.out.println("");
         }  
     }
+      /**Escribir un programa que procese una secuencia de caracteres ingresada por teclado
+       * y terminada en punto, y luego codifique la palabra o frase ingresada de la siguiente 
+       * manera: cada vocal se reemplaza por el carácter que se indica en la tabla y el resto
+       * de los caracteres (incluyendo a las vocales acentuadas) se mantienen sin cambios.
+       */
+     
+      public static void Ejercicio11(String frase){
+          Scanner read = new Scanner(System.in);
+          frase = read.nextLine();
+          for (int i = 0; i < frase.length(); i++) {
+              String buscaVocal = frase.substring(i,i+1).toLowerCase();
+              if (buscaVocal.equals("a") ||buscaVocal.equals("e") ||buscaVocal.equals("i") ||buscaVocal.equals("o") ||buscaVocal.equals("u")){
+                  switch (buscaVocal) {
+                      case "a":
+                          buscaVocal = "@";
+                          break;
+                      case "e":
+                          buscaVocal = "#";
+                          break;
+                      case "i":
+                          buscaVocal = "$";
+                          break;
+                      case "o":
+                          buscaVocal = "%";
+                          break;
+                      case "u":
+                          buscaVocal = "*";
+                          break;
+                  }
+              }else{
+                  buscaVocal = buscaVocal;
+              }
+              System.out.print(i);
+          }
+          
+      }
+    
 }
 

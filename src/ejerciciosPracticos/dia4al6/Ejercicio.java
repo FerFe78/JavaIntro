@@ -1,4 +1,4 @@
-package ejerciciosPracticos.dia3al5;
+package ejerciciosPracticos.dia4al6;
 import java.util.*;
 public class Ejercicio {
     
@@ -158,11 +158,38 @@ solicite números al usuario hasta que la suma de los números introducidos supe
         FDE = false;
         do {
             System.out.println("Ingrese secuencia");
-            secuencia = read.next();
-            if (secuencia.length() == 5){
+            secuencia = read.next().toUpperCase();
+            if (secuencia.length() <= 5){
                 if(secuencia.equals("&&&&&")){
                     FDE = true;
-                }else if (secuencia.substring(0,1).equals("X") && secuencia.substring(4,5).equals("O")){
+                }else if (secuencia.substring(0,1).equals("X") && secuencia.substring(secuencia.length()-1,secuencia.length()).equals("O")){
+                    lecCorrectas += 1;
+                }else {
+                    lecIncorrectas += 1;
+                }
+            }else {
+                lecIncorrectas += 1;
+            }
+        }while (!FDE);
+        System.out.println("Lecturas correctas: "+ lecCorrectas);
+        System.out.println("Lecturas incorrectas: "+ lecIncorrectas);        
+    }
+    public void Ejercicio7b (){
+        String secuencia;
+        boolean FDE;
+        int lecCorrectas;
+        int lecIncorrectas;
+        lecCorrectas = 0;
+        lecIncorrectas = 0;
+        Scanner read = new Scanner(System.in);
+        FDE = false;
+        do {
+            System.out.println("Ingrese secuencia");
+            secuencia = read.next().toUpperCase();
+            if (secuencia.length() <= 5){
+                if(secuencia.equals("&&&&&")){
+                    FDE = true;
+                }else if (secuencia.startsWith("X") && secuencia.endsWith("O")){
                     lecCorrectas += 1;
                 }else {
                     lecIncorrectas += 1;
@@ -184,9 +211,10 @@ solicite números al usuario hasta que la suma de los números introducidos supe
         for (i = 0; i < lado;i++){
             for (j = 0; j < lado; j++){
                 if(i == 0 || i == lado-1 || j == 0 || j == lado-1){
-                    System.out.print("*");
+                    
+                    System.out.print("* ");
                 }else {
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
             }
             System.out.println("");    

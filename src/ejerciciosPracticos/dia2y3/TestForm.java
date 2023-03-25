@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejerciciosPracticos.dia1y2;
+package ejerciciosPracticos.dia2y3;
 
 /**
  *

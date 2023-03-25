@@ -1,4 +1,4 @@
-package ejerciciosPracticos.dia1y2;
+package ejerciciosPracticos.dia2y3;
 import java.util.*;
 public class Ejercicio {
     public void  Ejercicio1 (){
